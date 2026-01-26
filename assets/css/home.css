@@ -1,0 +1,129 @@
+body {
+    overflow-x: hidden;
+}
+
+.gx-10 {
+    --bs-gutter-x: 6rem;
+}
+
+.testimony p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5.25rem;
+    height: 2px;
+    background-color: white;
+    z-index: -2;
+}
+
+.stat-count .stat-number p {
+    font-size: 100px;
+}
+
+.shop-options .option {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3rem;
+}
+
+.shop-options .option.highlight {
+    background-color: var(--theme-color)!important;
+    margin-left: -10px;
+    margin-right: -10px;
+    scale: 1.12;
+    position: relative;
+}
+.shop-options .option.highlight .content-wrapper {
+    background-color: var(--theme-color)!important;
+}
+
+.shop-options .option {
+    border-radius: 3rem;
+    background-color: #fff;
+}
+
+@media(max-width: 768px) {
+    .shop-options .option {
+        padding-bottom: 0;
+        height: 600px;
+    }
+    .shop-options .option.highlight {
+        margin-left: 0;
+        margin-right: 0;
+        scale: 1;
+    }
+}
+
+.shop-options .option.highlight .price-wrapper * {
+    color: #fff;
+}
+.shop-options .price-wrapper * {
+    color: var(--theme-color);
+}
+
+.client-container {
+    background-color: #919191;
+    z-index: 1;
+}
+
+.client-container .overlay-bg {
+    background-image: url('https://caviar.id/wp-content/uploads/2023/03/06.png');
+    background-size: 25px;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.client-carousel .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px!important;
+}
+
+
+.client-carousel .owl-nav .owl-prev {
+    left: -40px;
+}
+
+.client-carousel .owl-nav .owl-next {
+    right: -40px;
+}
+
+@media(max-width: 768px) {
+    .client-carousel .owl-nav button {
+        transform: translateX(-50%);
+        top: auto;
+        bottom: -25px;
+    }
+
+    .client-carousel .owl-nav .owl-prev {
+        left: 40%;
+    }
+    
+    .client-carousel .owl-nav .owl-next {
+        right: 40%;
+    }
+
+}
+
+.client-carousel .item {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.quot-mark {
+    left: 0;
+    top: 0;
+}
+
+.quot-mark img {
+    width: 43px!important;
+    height: 37px;
+}
+
+.star-mark img {
+    width: 78px!important;
+    height: 12px;
+}
