@@ -245,19 +245,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div> -->
             <div class="flex lg:hidden justify-end items-center hamburger-wrapper absolute top-1/2 -translate-y-1/2">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <!-- <span></span> -->
-                </div>
+                <div id="mobile-nav-overlay" class="fixed inset-0 bg-black z-[10000] hidden flex-col transition-all duration-300">
+    <div class="flex justify-between items-center p-5 border-b border-gray-900">
+        <span class="text-[#9c6b0b] font-bold uppercase tracking-widest">Menu</span>
+        <button id="close-mobile-menu" class="text-white text-4xl">&times;</button>
+    </div>
+    <div class="flex flex-col p-6 gap-5 overflow-y-auto">
+        <a href="/shop" class="text-white text-lg font-semibold border-b border-gray-900 pb-3">SHOP</a>
+        <a href="/news-event" class="text-white text-lg font-semibold border-b border-gray-900 pb-3">EVENT & NEWS</a>
+        <a href="/contact" class="text-white text-lg font-semibold border-b border-gray-900 pb-3">CONTACT</a>
+        
+        <div class="mt-4">
+            <p class="text-gray-500 text-xs uppercase mb-4 tracking-widest">Product Brands</p>
+            <div class="flex flex-col gap-3">
+                <?php foreach(get_terms(array('taxonomy' => 'product_cat', 'hide_empty' => false)) as $brand) : ?>
+                    <a href="<?= get_category_link($brand->term_id) ?>" class="text-gray-300"><?= $brand->name ?></a>
+                <?php endforeach; ?>
             </div>
-            <div class="shopping-bag absolute right-0 top-1/2 -translate-y-1/2 block lg:hidden">
-                <div class="inner-cart relative">
+        </div>
+    </div>
+</div>
+
+<header class="lg:hidden fixed top-0 left-0 right-0 bg-black z-[1000] border-b border-gray-900 h-16 flex items-center">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        
+        <div class="flex-shrink-0">
+            <a href="/">
+                <?php 
+                $logo = get_theme_mod( 'mytheme_logo' );
+                if ( $logo ) : ?>
+                    <img src="<?= esc_url( $logo ); ?>" alt="Logo" class="h-7 w-auto object-contain" />
+                <?php else : ?>
+                    <span class="text-[#9c6b0b] font-bold text-sm uppercase">Caviar Indonesia</span>
+                <?php endif; ?>
+            </a>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <div class="relative">
+                <a href="/cart" class="text-white">
+                    <i class="fa fa-shopping-bag text-xl"></i>
                     <?php if(count(WC()->cart->get_cart())) : ?>
-                    <div class="cart-count absolute p-1 px-2 leading-none rounded-full"><?= count(WC()->cart->get_cart()) ?></div>
+                        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold">
+                            <?= count(WC()->cart->get_cart()) ?>
+                        </span>
                     <?php endif ?>
-                    <a href="/cart" aria-label="Cart" alt="Check your cart"><i class="fa fa-shopping-bag text-2xl" aria-hidden="true"></i></a>
-                </div>
+                </a>
+            </div>
+
+            <button id="open-mobile-menu" class="flex flex-col justify-center items-end gap-1 w-7 focus:outline-none">
+                <span class="w-7 h-0.5 bg-white"></span>
+                <span class="w-5 h-0.5 bg-[#9c6b0b]"></span>
+                <span class="w-7 h-0.5 bg-white"></span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<div class="lg:hidden h-16"></div>
             </div>
         </nav>
     </header>
