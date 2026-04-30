@@ -44,6 +44,12 @@ if ( $related_products ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
 
 	</section>
+<style>
+.related {
+	padding-top: 16px;
+	padding-bottom: 16px
+}
+</style>
 	<?php
 endif;
 

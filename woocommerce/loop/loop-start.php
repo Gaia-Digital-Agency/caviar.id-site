@@ -19,5 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="container py-24">
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?> grid grid-cols-12 lg:gap-x-24 md:gap-x-12 gap-x-8 gap-y-16">
+<div class="other container py-24">
+<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?> grid grid-cols-12 md:gap-x-12 gap-x-8 gap-y-16">
+<style>
+.other {
+	padding-top: 32px;
+	padding-bottom: 32px
+}	
+</style>

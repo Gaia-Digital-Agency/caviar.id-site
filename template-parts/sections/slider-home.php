@@ -50,7 +50,7 @@ $tags = get_terms([
 <div class="container pb-24 relative">
     <div class="slider-title mb-8">
         <h2 class="text-3xl fw-medium text-center">High-End <span class="text-themecolor">Caviar Type</span></h2>
-        <p class="fw-light text-center px-56">Experience the subtle elegance of our finest caviar selections. Each variety, from the smooth richness of Beluga to the delicate notes of Siberian Sturgeon, is thoughtfully curated to bring a touch of refinement to your dining moments. Let every taste be a gentle indulgence.</p>
+        <p class="fw-light text-center">Experience the subtle elegance of our finest caviar selections. Each variety, from the smooth richness of Beluga to the delicate notes of Siberian Sturgeon, is thoughtfully curated to bring a touch of refinement to your dining moments. Let every taste be a gentle indulgence.</p>
     </div>
     <div class="swiper slider-home">
         <div class="swiper-wrapper">
@@ -60,7 +60,7 @@ $tags = get_terms([
                         <div class="image-wrapper relative pt-[100%]">
                             <a href="<?= get_category_link($tag->term_id) ?>">
                                 <?php if(get_field('image', $tag)) : ?>
-                                    <img src="<?= get_field('image', $tag)['url'] ?>" class="absolute inset-0 w-full h-full object-cover" alt="">
+                                    <img src="<?= get_field('image', $tag)['url'] ?>" class="absolute inset-0 w-full h-full object-cover" alt="<?= $img['alt'] ? $img['alt'] : $tag->name ?>">
                                 <?php else : ?>
                                     <div class="w-full h-full absolute inset-0" style="background-color: #c8934d;"></div>
                                 <?php endif; ?>
@@ -74,6 +74,6 @@ $tags = get_terms([
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+<!--     <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
 </div>
