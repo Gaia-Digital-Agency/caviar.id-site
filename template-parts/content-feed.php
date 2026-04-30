@@ -15,23 +15,30 @@
     border-color: var(--theme-color) !important;
     text-decoration: none !important;
 }
+
+/* Image no Display Mobile and Tablet */
+@media only screen and (max-width: 1023px) {
+	.m-display {
+		display: none;
+	}
+}
 </style>
 
 <div class="outer-wrapper relative observe-animate">
-    <div class="instagram-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<!--     <div class="instagram-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <a class="fs-5 px-5 px-lg-3 py-2 bg-themecolor rounded text-decoration-none d-block w-100" href="#">
             FOLLOW ON INSTAGRAM
         </a>
-    </div>
+    </div> -->
     <div class="grid grid-cols-12 mx-0 gx-1">
-        <div class="lg:col-span-4 col-span-12">
-            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326310804_590242312934410_7642156829909380128_n.jpeg" alt="">
+        <div class="m-display lg:col-span-4 col-span-12">
+            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326310804_590242312934410_7642156829909380128_n.jpeg" alt="russian caviar house">
         </div>
         <div class="lg:col-span-4 col-span-12">
-            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326445084_157467007055550_3362675844327902218_n.jpeg" alt="">
+            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326445084_157467007055550_3362675844327902218_n.jpeg" alt="russian caviar house">
         </div>
-        <div class="lg:col-span-4 col-span-12">
-            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326401690_859746898691081_691770782531102676_n.jpeg" alt="">
+        <div class="m-display lg:col-span-4 col-span-12">
+            <img class="img-fluid" src="https://russiancaviarhouse.id/wp-content/uploads/2023/03/326401690_859746898691081_691770782531102676_n.jpeg" alt="russian caviar house">
         </div>
     </div>
 </div>

@@ -32,9 +32,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             </a>
         </div>
         <div class="product-name mb-3">
-            <p class="mb-0 text-2xl lh-1 fw-bold">
+            <h2 class="mb-0 text-2xl lh-1 fw-bold">
                 <?= $product->get_name();?>
-            </p>
+            </h2>
         </div>
         <!-- <div class="product-notes mb-2">
             <p class="font-subtheme text-themecolor mb-0 text-lg lh-1">
