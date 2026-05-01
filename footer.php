@@ -1,10 +1,12 @@
 <?php get_template_part('template-parts/content', 'feed') ?>
 <style>
     /* Hover Transition */
-    .footer-link, .footer-link:hover {
+    footer a.footer-link:hover {
+        color: var(--theme-color) !important;
         text-decoration: none !important;
-        color: white !important;
-        transition: 0.3s;
+    }
+    .copyright p a.footer-link::after {
+        content: none !important;
     }
 	.footer-link i, 
     .footer-link span {
@@ -159,7 +161,7 @@
 				</div>
 			</div>
         </div>
-		<div class="pt-8 text-center">
+		<div class="pt-8 text-center copyright">
             <p class="text-white opacity-50 text-sm">
                 © <?php echo date("Y"); ?> Caviar ID. All Rights Reserved. Developed by <a href="https://gaiada.com" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Gaia Digital Agency">Gaia Digital Agency</a>.
             </p>
