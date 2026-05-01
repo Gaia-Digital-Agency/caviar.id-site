@@ -15,7 +15,7 @@
     .footer-link:hover, 
     .footer-link:hover i, 
     .footer-link:hover span {
-        color: #9c6b0b !important;
+        color: var(--theme-color) !important;
     }
 	@media only screen and (min-width: 1024px) {
 	  .info {
@@ -161,7 +161,7 @@
         </div>
 		<div class="pt-8 text-center">
             <p class="text-white opacity-50 text-sm">
-                © <?php echo date("Y"); ?> Caviar ID. All Rights Reserved
+                © <?php echo date("Y"); ?> Caviar ID. All Rights Reserved. Developed by <a href="https://gaiada.com" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Gaia Digital Agency">Gaia Digital Agency</a>.
             </p>
         </div>
     </div>
