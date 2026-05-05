@@ -736,7 +736,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <?php if(count(WC()->cart->get_cart())) : ?>
                                 <div class="cart-count absolute p-1 px-2 leading-none rounded-full"><?= count(WC()->cart->get_cart()) ?></div>
                                 <?php endif ?>
-                                <a href="/cart" aria-label="Cart" alt="Check your cart"><i class="fa fa-shopping-bag text-2xl" aria-hidden="true"></i></a>
+                                <a href="/cart/" aria-label="Cart" alt="Check your cart"><i class="fa fa-shopping-bag text-2xl" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </li>
@@ -791,7 +791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p style="font-size: 32px; font-weight: bold; color: #ffffff !important; cursor: default; pointer-events: none; margin: 0;"> <?php bloginfo( 'name' ); ?> </p>
             </a>
             <div class="m-top-actions">
-                <a href="/cart" class="m-icon-link" aria-label="View Shopping Cart">
+                <a href="/cart/" class="m-icon-link" aria-label="View Shopping Cart">
                     <i class="fa fa-shopping-bag"></i>
                     <?php if(WC()->cart->get_cart_contents_count() > 0) : ?>
                         <p style="font-size: 32px; font-weight: bold; color: #ffffff !important; cursor: default; pointer-events: none; margin: 0;"> <?php bloginfo( 'name' ); ?> </p>
