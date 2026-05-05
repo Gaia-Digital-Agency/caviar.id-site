@@ -729,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </li>
                     <li class="nav-link pl-4 pr-8"><a class="text-decoration-none nav-link-btn" href="/" aria-label="Accessories"><p class="text-lg inline-block">Accessories</p></a></li>
-                    <li class="nav-link pl-4 pr-8"><a class="text-decoration-none nav-link-btn" href="/contact" aria-label="Contact"><p class="text-lg inline-block">Contact</p></a></li>
+                    <li class="nav-link pl-4 pr-8"><a class="text-decoration-none nav-link-btn" href="/contact/" aria-label="Contact"><p class="text-lg inline-block">Contact</p></a></li>
                     <li class="nav-link px-4">
                         <div class="shopping-bag hidden lg:block">
                             <div class="inner-cart relative">
@@ -823,7 +823,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </details>
                 <a href="/" class="m-single-link">Accessories</a>
-                <a href="/contact" class="m-single-link">Contact</a>
+                <a href="/contact/" class="m-single-link">Contact</a>
             </div>
 
     <!--         <div class="m-overlay-footer">
